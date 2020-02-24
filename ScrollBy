@@ -1,0 +1,4 @@
+//Wait - Scroll
+       IJavaScriptExecutor java = driver as IJavaScriptExecutor;
+       Thread.Sleep(3000);
+       java.ExecuteScript("window.scrollBy(100,0)");
