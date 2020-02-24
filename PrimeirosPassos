@@ -1,0 +1,21 @@
+*** Criando o Projeto de Testes no VS- Selenium ***
+
+1. Em New Project escolher 'Test' e posteriormente selecionar a opção 'Unit Test Project (.NET Framework)'
+2. Instalar os pacotes necessários - Ir em Manager NuGet Packages for Solution
+   - Selenium.WebDriver
+   - Selenium.Chrome.WebDriver - Ou o driver referente a outro browser, caso não seja utilizado o Chrome
+3. Bibliotecas necessárias
+   - OpenQA.Selenium
+   - OpenQA.Selenium.Chrome
+   - System (default)
+   - Microsoft.VisalStudio.TestTools.UnitTesting (default)
+
+*** Primeiros Comandos ***
+[TestMethod]
+public void Exemplo()
+{
+    IWebDriver driver = new ChromeDriver(); //Especificar qual browser será utilizado
+    driver.Navigate().GoToURL("https://www.url.com"); //Informar a URL do site a ser testado
+    driver.Manage().Window.Maximize(); //Ao abrir a tela será maximizada
+    driver.Close(); //Fechar o browser após finalizado o teste
+}
