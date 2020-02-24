@@ -1,0 +1,48 @@
+Em geral, na classe principal [TestClass] de nosso projeto Selenium existem alguns atributos de teste comumente 
+utilizados, são eles: TestInitialize, TestCleanup e TestMethod.
+
+[TestInitialize] - É utilizado quando queremos que uma função seja executada antes da execução do teste.
+[TestCleanup] - Este é o oposto do TestInitialize, isto é, será executado sempre depois da execução do teste.
+[TestMethod] - Para identificar que o método criado é um método de teste.
+
+[TestClass]
+public class Exemplo
+{
+    private MemoryStream _stream;
+
+    [TestInitialize]
+    public void Initialize()
+    {
+        _stream = new MemoryStream();
+    }
+
+    [TestCleanup]
+    public void Cleanup()
+    {
+        _stream.Dispose();
+    }
+
+    [TestMethod]
+    public void MeuTeste1()
+    {
+        //Arrange
+        //Act
+        //Assert
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
