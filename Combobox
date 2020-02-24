@@ -1,0 +1,7 @@
+//Exemplo de como usar COMBOBOX
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("FaseTarefaId"))).Click();
+            IWebElement iWebelement = driver.FindElement(By.Id("FaseTarefaId"));
+            IWebElement iWebelementList = driver.FindElement(By.Id("FaseTarefaId"));
+            SelectElement fase = new SelectElement(iWebelementList);
+            iWebelement.SendKeys(Keys.ArrowDown);
+            fase.SelectByText("SOLICITADO");
