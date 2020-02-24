@@ -1,0 +1,6 @@
+//Menus e SubMenus
+            Actions builder = new Actions(driver);
+            builder.MoveToElement(driver.FindElement(By.Id("btnMenu-CadastrosIndex"))); 
+            builder.MoveToElement(driver.FindElement(By.Id("btnMenu-CadastrosTabelaDePrecosIndex"))); //SubSubMenu
+            builder.Click();
+            builder.Perform();
